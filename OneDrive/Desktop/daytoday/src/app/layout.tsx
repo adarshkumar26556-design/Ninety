@@ -5,13 +5,20 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Ninety",
   description: "Track your 90-day challenge and build new habits with Ninety.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Ninety",
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f8f9fa",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
