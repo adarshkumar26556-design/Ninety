@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-inter: "Inter", sans-serif;
+
   --color-primary: var(--primary);
   --color-background: var(--background);
   --color-accent: var(--accent);
