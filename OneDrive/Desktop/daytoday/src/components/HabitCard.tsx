@@ -83,17 +83,6 @@ export function HabitCard({
         )}
       </div>
 
-      {onRemove && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onRemove(id);
-          }}
-          className="absolute right-2 top-2 p-2 rounded-full text-danger/0 hover:bg-danger/10 group-hover:text-danger/70 hover:!text-danger transition-all focus:text-danger/100"
-        >
-          <Trash2 className="w-4 h-4" />
-        </button>
-      )}
     </div>
   )
 }

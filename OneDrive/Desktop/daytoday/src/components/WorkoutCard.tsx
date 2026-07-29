@@ -83,14 +83,6 @@ export function WorkoutCard({ exercises, onToggleExercise, onAddExercise, onRemo
                           className="w-6 h-6 rounded-md border-text-secondary/30 text-accent focus:ring-accent accent-accent transition-all cursor-pointer"
                         />
                       </label>
-                      {onRemoveExercise && (
-                        <button
-                          onClick={() => onRemoveExercise(exercise.id)}
-                          className="absolute right-3 top-1/2 -translate-y-1/2 p-2 text-danger/50 hover:text-danger hover:bg-danger/10 rounded-full opacity-0 group-hover:opacity-100 transition-all focus:opacity-100"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      )}
                     </div>
                   ))
                 )}
