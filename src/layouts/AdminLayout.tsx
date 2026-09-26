@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Outlet, Link, useLocation, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  LayoutDashboard, Building2, PlusCircle, Settings, LogOut,
+  LayoutDashboard, Building2, PlusCircle, LogOut,
   Menu, X, ChevronRight
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';

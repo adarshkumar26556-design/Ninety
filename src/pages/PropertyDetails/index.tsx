@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   MapPin, Star, Users, Bed, Wifi, Car, UtensilsCrossed, Waves,
   MessageCircle, ArrowLeft, ChevronLeft, ChevronRight, X, Check,
-  Phone, Share2
+  Phone, Share2, ArrowRight
 } from 'lucide-react';
 import { useProperty } from '../../hooks/useProperties';
 import { formatPrice, generateWhatsAppMessage, getBrandTagClass } from '../../utils';

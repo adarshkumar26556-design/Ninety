@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Plus, Trash2, Save, Image as ImageIcon } from 'lucide-react';
+import { ArrowLeft, Trash2, Image as ImageIcon } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { propertyApi } from '../../../services/propertyApi';
-import type { PropertyBrand, PropertyType, PropertyStatus, Room } from '../../../types';
+import type { PropertyBrand, PropertyType, PropertyStatus } from '../../../types';
 import { AMENITIES_LIST } from '../../../data/properties';
 import { cn } from '@/lib/utils';
 
 const BRANDS: PropertyBrand[] = ['Vilstay', 'Vilstay Go', 'Vilstay Venue'];
 const TYPES: PropertyType[] = ['Resort', 'Villa', 'Hotel', 'Boutique Stay', 'Homestay', 'Wedding Venue', 'Event Space'];
-const BED_TYPES = ['King', 'Queen', 'Double', 'Twin', 'Single', 'King + Twin', 'Bunk'];
 
 interface RoomForm {
   name: string;
@@ -22,9 +20,6 @@ interface RoomForm {
   amenities: string[];
 }
 
-const emptyRoom: RoomForm = {
-  name: '', description: '', price: '', maxGuests: '', bedType: 'King', images: [], amenities: [],
-};
 
 interface PropertyForm {
   name: string;

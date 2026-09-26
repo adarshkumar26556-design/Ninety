@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, PlusCircle, Pencil, Trash2, ExternalLink, Filter } from 'lucide-react';
+import { Search, PlusCircle, Pencil, Trash2, ExternalLink, Building2, MapPin } from 'lucide-react';
 import type { Property, PropertyBrand, PropertyStatus } from '../../../types';
 import { MOCK_PROPERTIES } from '../../../data/properties';
 import { propertyApi } from '../../../services/propertyApi';

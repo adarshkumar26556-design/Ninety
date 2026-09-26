@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Mail, Phone } from 'lucide-react';
-import { cn } from '@/lib/utils';
+
 
 export const Footer: React.FC = () => {
   return (

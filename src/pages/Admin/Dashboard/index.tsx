@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Building2, TrendingUp, Star, Eye, Pencil, Trash2, PlusCircle, ExternalLink, Activity, ChevronRight } from 'lucide-react';
+import { Building2, TrendingUp, Star, Pencil, Trash2, PlusCircle, ExternalLink, Activity, ChevronRight } from 'lucide-react';
 import type { Property } from '../../../types';
 import { MOCK_PROPERTIES } from '../../../data/properties';
 import { propertyApi } from '../../../services/propertyApi';
-import { formatPrice, getBrandTagClass } from '../../../utils';
 import toast from 'react-hot-toast';
 import { cn } from '@/lib/utils';
 
