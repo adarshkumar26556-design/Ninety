@@ -297,6 +297,17 @@ export const PropertyDetailsPage: React.FC = () => {
                     <Phone size={20} />
                     Call Property
                   </a>
+                  {property.websiteUrl && (
+                    <a
+                      href={property.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary w-full py-4 text-lg justify-center bg-brand-50 text-brand-700 border-brand-200 hover:bg-brand-100"
+                    >
+                      <ArrowRight size={20} />
+                      Visit Original Website
+                    </a>
+                  )}
                 </div>
 
                 <div className="p-4 bg-brand-50 rounded-2xl border border-brand-100">

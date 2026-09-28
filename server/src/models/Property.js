@@ -39,6 +39,7 @@ const propertySchema = new mongoose.Schema({
   amenities: [String],
   whatsappNumber: { type: String, default: '+919947584947' },
   googleMapsUrl: String,
+  websiteUrl: String,
   featured: { type: Boolean, default: false },
   status: {
     type: String,

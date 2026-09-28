@@ -38,6 +38,7 @@ export interface Property {
   amenities: string[];
   whatsappNumber: string;
   googleMapsUrl: string;
+  websiteUrl: string;
   featured: boolean;
   status: PropertyStatus;
   rooms: Room[];

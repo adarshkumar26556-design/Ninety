@@ -96,12 +96,12 @@ router.post('/properties', protect, async (req, res) => {
 router.put('/properties/:id', protect, async (req, res) => {
   try {
     const body = req.body;
-    // Parse arrays
+    // Parse arrays if sent as strings (FormData compat)
     if (typeof body['amenities[]'] === 'string') body.amenities = [body['amenities[]']];
     else if (Array.isArray(body['amenities[]'])) body.amenities = body['amenities[]'];
     if (typeof body['images[]'] === 'string') body.images = [body['images[]']];
     else if (Array.isArray(body['images[]'])) body.images = body['images[]'];
-    // Parse location
+    // Parse location from FormData format if needed
     if (body['location[destination]']) {
       body.location = {
         destination: body['location[destination]'],
@@ -109,6 +109,10 @@ router.put('/properties/:id', protect, async (req, res) => {
         state: body['location[state]'],
         country: body['location[country]'],
       };
+    }
+    // Parse rooms if sent as string
+    if (body.rooms && typeof body.rooms === 'string') {
+      body.rooms = JSON.parse(body.rooms);
     }
 
     const property = await Property.findByIdAndUpdate(req.params.id, body, { new: true, runValidators: true });

@@ -28,17 +28,13 @@ export const propertyApi = {
     return response.data;
   },
 
-  createProperty: async (data: FormData) => {
-    const response = await api.post<ApiResponse<Property>>('/admin/properties', data, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    });
+  createProperty: async (data: Partial<Property>) => {
+    const response = await api.post<ApiResponse<Property>>('/admin/properties', data);
     return response.data;
   },
 
-  updateProperty: async (id: string, data: FormData) => {
-    const response = await api.put<ApiResponse<Property>>(`/admin/properties/${id}`, data, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    });
+  updateProperty: async (id: string, data: Partial<Property>) => {
+    const response = await api.put<ApiResponse<Property>>(`/admin/properties/${id}`, data);
     return response.data;
   },
 

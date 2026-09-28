@@ -27,6 +27,7 @@ export const MOCK_PROPERTIES: Property[] = [
     amenities: ['Wi-Fi', 'Air Conditioning', 'Parking', 'Room Service', 'Family Friendly', '24-hour Front Desk'],
     whatsappNumber: '+919947584947',
     googleMapsUrl: 'https://maps.google.com/?q=11.1229081,76.0853759',
+    websiteUrl: 'https://vilstay.com/properties/vilstay-premium-manikarnika-boutique-resort',
     featured: true,
     status: 'active',
     rooms: [
@@ -76,6 +77,7 @@ export const MOCK_PROPERTIES: Property[] = [
     amenities: ['Wi-Fi', 'Parking', 'Room Service', 'Laundry', 'Lake View', 'Air Conditioning'],
     whatsappNumber: '+919947584947',
     googleMapsUrl: 'https://maps.google.com/?q=11.5722725,75.8360294',
+    websiteUrl: 'https://vilstay.com/properties/vilstay-premium-panthalaza-lakefront-heritage-resort',
     featured: true,
     status: 'active',
     rooms: [
@@ -116,6 +118,7 @@ export const MOCK_PROPERTIES: Property[] = [
     amenities: ['Wi-Fi', 'Room Service', 'Family Friendly', 'Mountain View', 'Eco Friendly', 'Parking'],
     whatsappNumber: '+919947584947',
     googleMapsUrl: 'https://maps.google.com/?q=11.5490103,76.0478544',
+    websiteUrl: 'https://vilstay.com/properties/vilstay-kalani-boutique-stay-vythiri',
     featured: true,
     status: 'active',
     rooms: [
@@ -156,6 +159,7 @@ export const MOCK_PROPERTIES: Property[] = [
     amenities: ['Wi-Fi', 'Parking', 'Air Conditioning', 'Family Friendly', '24-hour Front Desk', 'Tea/Coffee'],
     whatsappNumber: '+919656584947',
     googleMapsUrl: 'https://maps.google.com/?q=9.415756,76.3487398',
+    websiteUrl: 'https://vilstay.com/properties/vilstaygo-malabar-comforts-alappuzha',
     featured: false,
     status: 'active',
     rooms: [
@@ -196,6 +200,7 @@ export const MOCK_PROPERTIES: Property[] = [
     amenities: ['Wi-Fi', 'Parking', 'Air Conditioning', 'Family Friendly', '24-hour Front Desk', 'Power Backup'],
     whatsappNumber: '+919947584947',
     googleMapsUrl: 'https://maps.google.com/?q=11.0287163,76.0373131',
+    websiteUrl: 'https://vilstay.com/properties/vilstay-go-hill-view-residency',
     featured: false,
     status: 'active',
     rooms: [
@@ -236,6 +241,7 @@ export const MOCK_PROPERTIES: Property[] = [
     amenities: ['Caretaker Support', 'Dining Area', 'Outdoor Seating', 'Parking', 'Nature Trails'],
     whatsappNumber: '+919947584947',
     googleMapsUrl: 'https://maps.google.com/?q=11.5,76.1',
+    websiteUrl: '',
     featured: true,
     status: 'active',
     rooms: [

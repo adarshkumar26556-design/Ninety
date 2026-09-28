@@ -20,6 +20,31 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) =
     property.whatsappNumber
   );
 
+  // Use the original website URL if available, otherwise fall back to internal page
+  const hasExternalLink = !!property.websiteUrl;
+  const propertyUrl = hasExternalLink ? property.websiteUrl : `/stays/${property.slug}`;
+
+  // Wrapper for the clickable image/name — external link opens in new tab
+  const PropertyLink: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => {
+    if (hasExternalLink) {
+      return (
+        <a
+          href={propertyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={className}
+        >
+          {children}
+        </a>
+      );
+    }
+    return (
+      <Link to={propertyUrl} className={className}>
+        {children}
+      </Link>
+    );
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -29,7 +54,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) =
       className="group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-1 flex flex-col h-full"
     >
       {/* Image Container */}
-      <Link to={`/stays/${property.slug}`} className="relative aspect-[4/3] block overflow-hidden">
+      <PropertyLink className="relative aspect-[4/3] block overflow-hidden">
         {property.images[0] ? (
           <img
             src={property.images[0]}
@@ -42,29 +67,18 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) =
           </div>
         )}
         
-        {/* Gradients & Badges */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 opacity-60 transition-opacity group-hover:opacity-40" />
-        
-        <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
-          <span className={cn("text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full backdrop-blur-md shadow-sm", getBrandTagClass(property.brand))}>
-            {property.brand}
-          </span>
-          {property.featured && (
-            <span className="bg-gold-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
-              Featured
-            </span>
-          )}
-        </div>
-      </Link>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 transition-opacity group-hover:opacity-40" />
+      </PropertyLink>
 
       {/* Content Container */}
       <div className="p-5 sm:p-6 flex flex-col flex-1">
         <div className="flex justify-between items-start gap-4 mb-2">
-          <Link to={`/stays/${property.slug}`} className="hover:text-brand-600 transition-colors">
+          <PropertyLink className="hover:text-brand-600 transition-colors">
             <h3 className="font-display text-xl sm:text-2xl font-semibold text-stone-900 leading-tight line-clamp-1">
               {property.name}
             </h3>
-          </Link>
+          </PropertyLink>
           <div className="flex items-center gap-1 bg-stone-50 px-2 py-1 rounded-lg shrink-0">
             <Star size={14} className="text-gold-500 fill-gold-500" />
             <span className="text-sm font-semibold text-stone-700">{property.rating}</span>
