@@ -39,9 +39,14 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0 z-50">
+          <Link to="/" className="flex-shrink-0 z-50 flex items-center gap-2">
+            <img 
+              src="/logo.png" 
+              alt="Vilstay" 
+              className="h-10 w-auto rounded-full transition-transform duration-300 hover:scale-105"
+            />
             <div className={cn(
-              "font-display text-2xl font-bold tracking-widest transition-colors duration-300",
+              "font-display text-2xl font-bold tracking-widest transition-colors duration-300 hidden sm:block",
               (!scrolled && isHome) ? "text-white" : "text-stone-900"
             )}>
               VILSTAY

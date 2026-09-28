@@ -12,8 +12,7 @@ const brands = [
     color: 'bg-brand-600',
     lightColor: 'bg-brand-50',
     textColor: 'text-brand-600',
-    img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80',
-    letter: 'V'
+    img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80'
   },
   {
     name: 'Vilstay Go',
@@ -22,8 +21,7 @@ const brands = [
     color: 'bg-blue-600',
     lightColor: 'bg-blue-50',
     textColor: 'text-blue-600',
-    img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80',
-    letter: 'G'
+    img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80'
   },
   {
     name: 'Vilstay Venue',
@@ -32,8 +30,7 @@ const brands = [
     color: 'bg-purple-600',
     lightColor: 'bg-purple-50',
     textColor: 'text-purple-600',
-    img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80',
-    letter: 'V'
+    img: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80'
   }
 ];
 
@@ -81,9 +78,6 @@ export const BrandSection: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
-                  <div className={cn("absolute top-4 left-4 w-12 h-12 rounded-xl flex items-center justify-center font-display text-2xl font-bold text-white shadow-lg", brand.color)}>
-                    {brand.letter}
-                  </div>
                 </div>
                 
                 <div className="p-8 text-center flex flex-col items-center">

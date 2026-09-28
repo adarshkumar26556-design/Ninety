@@ -28,9 +28,7 @@ export const AdminLayout: React.FC = () => {
       {/* Logo */}
       <div className="px-8 py-8 border-b border-stone-800">
         <Link to="/admin/dashboard" className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center font-display font-bold text-white text-xl shadow-glow">
-            V
-          </div>
+          <img src="/logo.png" alt="Vilstay" className="w-10 h-10 rounded-full" />
           <div>
             <div className="font-display font-bold text-white text-xl tracking-widest">VILSTAY</div>
             <div className="text-brand-400 text-xs font-semibold uppercase tracking-wider">Admin Panel</div>
