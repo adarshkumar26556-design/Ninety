@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Star, Users, Bed, Wifi, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Property } from '@/types';
-import { formatPrice, generateWhatsAppMessage, getBrandTagClass } from '@/utils';
-import { cn } from '@/lib/utils';
+import { formatPrice, generateWhatsAppMessage } from '@/utils';
 
 interface PropertyCardProps {
   property: Property;
