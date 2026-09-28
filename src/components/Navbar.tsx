@@ -35,88 +35,90 @@ export const Navbar: React.FC = () => {
   );
 
   return (
-    <nav className={navClass}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 z-50 flex items-center gap-2">
-            <img 
-              src="/logo.png" 
-              alt="Vilstay" 
-              className="h-10 w-auto rounded-full transition-transform duration-300 hover:scale-105"
-            />
-            <div className={cn(
-              "font-display text-2xl font-bold tracking-widest transition-colors duration-300 hidden sm:block",
-              (!scrolled && isHome) ? "text-white" : "text-stone-900"
-            )}>
-              VILSTAY
-            </div>
-          </Link>
+    <>
+      <nav className={navClass}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link to="/" className="flex-shrink-0 z-50 flex items-center gap-2">
+              <img 
+                src="/logo.png" 
+                alt="Vilstay" 
+                className="h-10 w-auto rounded-full transition-transform duration-300 hover:scale-105"
+              />
+              <div className={cn(
+                "font-display text-2xl font-bold tracking-widest transition-colors duration-300 hidden sm:block",
+                (!scrolled && isHome) ? "text-white" : "text-stone-900"
+              )}>
+                VILSTAY
+              </div>
+            </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className={textClass}>Home</Link>
-            
-            {/* Brands Dropdown */}
-            <div className="relative group">
-              <button className={cn(textClass, 'flex items-center gap-1')}>
-                Brands <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
-              </button>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
-                <div className="bg-white rounded-2xl shadow-premium border border-stone-100 p-2 w-64 flex flex-col gap-1 relative before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-b-white">
-                  <Link to="/stays?brand=Vilstay" className="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-50 transition-colors group/item">
-                    <div className="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 font-display font-bold text-xl group-hover/item:scale-110 transition-transform">V</div>
-                    <div>
-                      <div className="font-semibold text-stone-900 text-sm">Vilstay Resorts</div>
-                      <div className="text-xs text-stone-500">Premium nature stays</div>
-                    </div>
-                  </Link>
-                  <Link to="/stays?brand=Vilstay Go" className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors group/item">
-                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-display font-bold text-xl group-hover/item:scale-110 transition-transform">G</div>
-                    <div>
-                      <div className="font-semibold text-stone-900 text-sm">Vilstay Go</div>
-                      <div className="text-xs text-stone-500">Comfortable city hotels</div>
-                    </div>
-                  </Link>
-                  <Link to="/stays?brand=Vilstay Venue" className="flex items-center gap-3 p-3 rounded-xl hover:bg-purple-50 transition-colors group/item">
-                    <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 font-display font-bold text-xl group-hover/item:scale-110 transition-transform">V</div>
-                    <div>
-                      <div className="font-semibold text-stone-900 text-sm">Vilstay Venue</div>
-                      <div className="text-xs text-stone-500">Weddings & events</div>
-                    </div>
-                  </Link>
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-8">
+              <Link to="/" className={textClass}>Home</Link>
+              
+              {/* Brands Dropdown */}
+              <div className="relative group">
+                <button className={cn(textClass, 'flex items-center gap-1')}>
+                  Brands <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                </button>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+                  <div className="bg-white rounded-2xl shadow-premium border border-stone-100 p-2 w-64 flex flex-col gap-1 relative before:absolute before:-top-2 before:left-1/2 before:-translate-x-1/2 before:border-8 before:border-transparent before:border-b-white">
+                    <Link to="/stays?brand=Vilstay" className="flex items-center gap-3 p-3 rounded-xl hover:bg-brand-50 transition-colors group/item">
+                      <div className="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-600 font-display font-bold text-xl group-hover/item:scale-110 transition-transform">V</div>
+                      <div>
+                        <div className="font-semibold text-stone-900 text-sm">Vilstay Resorts</div>
+                        <div className="text-xs text-stone-500">Premium nature stays</div>
+                      </div>
+                    </Link>
+                    <Link to="/stays?brand=Vilstay Go" className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors group/item">
+                      <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-display font-bold text-xl group-hover/item:scale-110 transition-transform">G</div>
+                      <div>
+                        <div className="font-semibold text-stone-900 text-sm">Vilstay Go</div>
+                        <div className="text-xs text-stone-500">Comfortable city hotels</div>
+                      </div>
+                    </Link>
+                    <Link to="/stays?brand=Vilstay Venue" className="flex items-center gap-3 p-3 rounded-xl hover:bg-purple-50 transition-colors group/item">
+                      <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 font-display font-bold text-xl group-hover/item:scale-110 transition-transform">V</div>
+                      <div>
+                        <div className="font-semibold text-stone-900 text-sm">Vilstay Venue</div>
+                        <div className="text-xs text-stone-500">Weddings & events</div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
+
+              <Link to="/stays" className={textClass}>All Stays</Link>
+              
+              <Link 
+                to="/stays" 
+                className={cn(
+                  "px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5",
+                  (!scrolled && isHome) 
+                    ? "bg-white text-stone-900 hover:bg-stone-100" 
+                    : "bg-brand-600 text-white hover:bg-brand-700 shadow-sm hover:shadow-glow"
+                )}
+              >
+                Explore Now
+              </Link>
             </div>
 
-            <Link to="/stays" className={textClass}>All Stays</Link>
-            
-            <Link 
-              to="/stays" 
-              className={cn(
-                "px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5",
-                (!scrolled && isHome) 
-                  ? "bg-white text-stone-900 hover:bg-stone-100" 
-                  : "bg-brand-600 text-white hover:bg-brand-700 shadow-sm hover:shadow-glow"
-              )}
+            {/* Mobile Menu Toggle */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden z-50 p-2"
             >
-              Explore Now
-            </Link>
+              {mobileMenuOpen ? (
+                <X size={24} className="text-stone-900" />
+              ) : (
+                <Menu size={24} className={(!scrolled && isHome) ? "text-white" : "text-stone-900"} />
+              )}
+            </button>
           </div>
-
-          {/* Mobile Menu Toggle */}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden z-50 p-2"
-          >
-            {mobileMenuOpen ? (
-              <X size={24} className={(!scrolled && isHome && !mobileMenuOpen) ? "text-white" : "text-stone-900"} />
-            ) : (
-              <Menu size={24} className={(!scrolled && isHome) ? "text-white" : "text-stone-900"} />
-            )}
-          </button>
         </div>
-      </div>
+      </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -125,8 +127,15 @@ export const Navbar: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-white pt-24 px-6 pb-6 overflow-y-auto"
+            className="fixed inset-0 z-50 bg-white pt-24 px-6 pb-6 overflow-y-auto"
           >
+            <button 
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute top-6 right-6 p-2 z-50"
+            >
+              <X size={24} className="text-stone-900" />
+            </button>
+
             <div className="flex flex-col gap-6">
               <Link to="/" className="text-2xl font-display text-stone-900 border-b border-stone-100 pb-4">Home</Link>
               
@@ -144,6 +153,6 @@ export const Navbar: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
