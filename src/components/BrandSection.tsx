@@ -12,7 +12,7 @@ const brands = [
     color: 'bg-brand-600',
     lightColor: 'bg-brand-50',
     textColor: 'text-brand-600',
-    img: 'https://www.hireacamp.com/api/external/image?name=uploads/df1ada6453744085916a16e3ec4a8e9c.jpeg&size=1200x900&q=80'
+    img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80'
   },
   {
     name: 'Vilstay Go',
