@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
               Curated premium stays across Kerala. From heritage resorts and lakefront villas to boutique hotels and event spaces.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="h-10 px-4 flex items-center justify-center rounded-full bg-stone-900 hover:bg-brand-600 hover:text-white transition-colors text-sm font-semibold">
+              <a href="https://www.instagram.com/vilstay?stkn=MTRvbWtuemZmZjI0Ng==" target="_blank" rel="noopener noreferrer" className="h-10 px-4 flex items-center justify-center rounded-full bg-stone-900 hover:bg-brand-600 hover:text-white transition-colors text-sm font-semibold">
                 Instagram
               </a>
             </div>
@@ -57,7 +57,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/stays" className="hover:text-white transition-colors">All Properties</Link></li>
               <li><Link to="/stays?destination=Wayanad" className="hover:text-white transition-colors">Stays in Wayanad</Link></li>
               <li><Link to="/stays?destination=Alappuzha" className="hover:text-white transition-colors">Stays in Alappuzha</Link></li>
-              <li><Link to="/admin/login" className="hover:text-white transition-colors">Admin Login</Link></li>
             </ul>
           </div>
 

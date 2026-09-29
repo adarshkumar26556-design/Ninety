@@ -114,18 +114,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) =
               <span className="text-stone-400 text-sm">/ night</span>
             </div>
           </div>
-          
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="flex h-12 w-12 sm:w-auto sm:px-6 items-center justify-center gap-2 bg-[#25D366] text-white rounded-full font-semibold transition-all hover:bg-[#1ebe5b] hover:shadow-lg hover:-translate-y-0.5"
-            title="Book via WhatsApp"
-          >
-            <MessageCircle size={20} />
-            <span className="hidden sm:inline">Book</span>
-          </a>
+
         </div>
       </div>
     </motion.div>
