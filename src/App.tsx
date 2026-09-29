@@ -7,6 +7,8 @@ import { AdminLayout } from './layouts/AdminLayout';
 import { HomePage } from './pages/Home';
 import { PropertiesPage } from './pages/Properties';
 import { PropertyDetailsPage } from './pages/PropertyDetails';
+import { TermsPage } from './pages/Terms';
+import { CancellationPage } from './pages/Cancellation';
 import { AdminLoginPage } from './pages/Admin/Login';
 import { AdminDashboardPage } from './pages/Admin/Dashboard';
 import { AdminPropertiesPage } from './pages/Admin/Properties';
@@ -48,8 +50,8 @@ function AppContent() {
         <Route path="/stays" element={<PropertiesPage />} />
         <Route path="/stays/:slug" element={<PropertyDetailsPage />} />
         <Route path="/privacy-policy" element={<div className="min-h-screen pt-24 section-container section-padding"><h1 className="section-title">Privacy Policy</h1><p className="section-subtitle mt-4">Contact vilstaygo@gmail.com for privacy inquiries.</p></div>} />
-        <Route path="/terms" element={<div className="min-h-screen pt-24 section-container section-padding"><h1 className="section-title">Terms & Conditions</h1><p className="section-subtitle mt-4">Contact vilstaygo@gmail.com for terms inquiries.</p></div>} />
-        <Route path="/cancellation-policy" element={<div className="min-h-screen pt-24 section-container section-padding"><h1 className="section-title">Cancellation Policy</h1><p className="section-subtitle mt-4">Contact vilstaygo@gmail.com for cancellation inquiries.</p></div>} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/cancellation-policy" element={<CancellationPage />} />
       </Route>
 
       {/* Admin Auth */}

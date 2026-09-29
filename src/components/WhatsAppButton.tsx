@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { motion } from 'framer-motion';
 
 export const WhatsAppButton: React.FC = () => {
@@ -20,7 +20,7 @@ export const WhatsAppButton: React.FC = () => {
       }}
     >
       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366] opacity-30"></span>
-      <MessageCircle className="h-7 w-7 relative z-10" />
+      <WhatsAppIcon className="h-7 w-7 relative z-10" />
       <span className="sr-only">Contact us on WhatsApp</span>
     </motion.a>
   );

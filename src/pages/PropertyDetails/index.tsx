@@ -3,13 +3,14 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   MapPin, Star, Users, Bed, Wifi, Car, UtensilsCrossed, Waves,
-  MessageCircle, ArrowLeft, ChevronLeft, ChevronRight, X, Check,
+  ArrowLeft, ChevronLeft, ChevronRight, X, Check,
   Phone, Share2, ArrowRight
 } from 'lucide-react';
 import { useProperty } from '../../hooks/useProperties';
 import { formatPrice, generateWhatsAppMessage, getBrandTagClass } from '../../utils';
 import type { Room } from '../../types';
 import { cn } from '@/lib/utils';
+import { WhatsAppIcon } from '../../components/WhatsAppIcon';
 
 const amenityIcons: Record<string, React.ReactNode> = {
   'Wi-Fi': <Wifi size={18} />,
@@ -287,7 +288,7 @@ export const PropertyDetailsPage: React.FC = () => {
                     rel="noopener noreferrer"
                     className="btn-whatsapp w-full py-4 text-lg justify-center shadow-md"
                   >
-                    <MessageCircle size={24} />
+                    <WhatsAppIcon size={24} />
                     WhatsApp to Book
                   </a>
                   <a
