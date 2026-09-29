@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import type { Property, PropertyFilters } from '../types';
-import { propertyApi } from '../services/propertyApi';
 import { MOCK_PROPERTIES } from '../data/properties';
 
 export const useProperties = (filters?: PropertyFilters) => {

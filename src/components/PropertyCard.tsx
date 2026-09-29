@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Star, Users, Bed, Wifi, MessageCircle } from 'lucide-react';
+import { MapPin, Star, Users, Bed, Wifi } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Property } from '@/types';
-import { formatPrice, generateWhatsAppMessage } from '@/utils';
+import { formatPrice } from '@/utils';
 
 interface PropertyCardProps {
   property: Property;
@@ -12,12 +12,6 @@ interface PropertyCardProps {
 
 export const PropertyCard: React.FC<PropertyCardProps> = ({ property, index }) => {
   const destination = `${property.location.destination}, ${property.location.state}`;
-  const whatsappUrl = generateWhatsAppMessage(
-    property.name,
-    destination,
-    undefined,
-    property.whatsappNumber
-  );
 
   // Use the original website URL if available, otherwise fall back to internal page
   const hasExternalLink = !!property.websiteUrl;
